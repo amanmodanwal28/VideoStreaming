@@ -5,7 +5,9 @@ import logo from '../assets/GP-Logo.png'
 const hamburger = () => {
   return (
     <>
-      <button>hamburger</button>
+      <div className="HamburgerContainer">
+        <button>hamburger</button>
+      </div>
       <img src={logo} alt="Logo" className="logo" />
     </>
   )
