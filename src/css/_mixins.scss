@@ -1,0 +1,25 @@
+// Define a mixin for border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Mixin for shared button styles
+@mixin button-styles {
+  background-color: $element-bg-color;
+  border: none;
+  padding: $button-padding;
+  cursor: pointer;
+  font-size: 1rem;
+  @include border-radius(70%);
+  color: #333;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: background-color 0.3s;
+
+  &:hover {
+  background-color: #0056b3; 
+  }
+}

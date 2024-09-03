@@ -1,0 +1,29 @@
+@import 'variables'; // Import the variables file
+@import 'mixins'; // Import the mixins file
+
+.LoginContainer {
+  width: 250px;
+  box-sizing: border-box;
+  padding: 1rem; // Use rem for padding to make it responsive
+
+  button {
+    height: 2.5rem;
+    width: 100%; // Ensure the button takes full width of its container
+    @include button-styles;
+    @include border-radius(100px);
+    display: flex; // Use flexbox for centering content
+    font-weight: bold; // Ensure content does not overflow
+  }
+}
+
+@media (max-width: 768px) {
+  .LoginContainer {
+    width: 270px;
+    padding: 1rem 0.5rem;
+
+    button {
+      height: 2.5rem; // Adjust height for smaller screens
+      font-size: 0.875rem; // Adjust font size for smaller screens
+    }
+  }
+}

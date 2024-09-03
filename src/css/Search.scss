@@ -1,0 +1,91 @@
+@import 'variables'; // Import the variables file
+@import 'mixins'; // Import the mixins file
+
+// Container styles to center the search component
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem; // Use rem for padding to make it responsive
+}
+
+.logo {
+  width: 85px; // Set your desired width
+  height: 85px; // Set your desired height
+  margin-right: 1rem; // Add space between the logo and search box
+}
+
+.mic-container {
+  width: 40px; // Set your desired width
+  height: 40px; // Set your desired height
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $element-border;
+  background-color: $element-bg-color;
+  @include border-radius(50%);
+
+  img {
+    width: 25px; // Set the desired image width
+    height: 25px; // Set the desired image height
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: #f0f0f0; // Hover effect
+  }
+}
+
+// Search box styles
+.search-box {
+  display: flex;
+  align-items: center;
+  border: $element-border;
+  @include border-radius($border-radius); // Rounded corners
+  background-color: $element-bg-color;
+  min-width: 2rem;
+  max-width: 39rem; // Limit the maximum width
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); // Use rem for box-shadow
+  transition: width 0.3s ease; // Smooth transition on resize
+
+  input {
+    flex: 1;
+    border: none;
+    padding: $button-padding; // Use the padding variable
+    font-size: large; // Set font size to large
+    @include border-radius($border-radius);
+    background-color: $element-bg-color;
+    color: #161515;
+    font-weight: bold; // Set font weight to bold
+    min-width: 2rem;
+
+    &::placeholder {
+      color: #999; // Placeholder color
+    }
+
+    &:focus {
+      outline: none; // Remove outline on focus
+    }
+  }
+
+  button {
+    @include button-styles; // Apply shared button styles
+  }
+}
+
+// Media queries for additional responsiveness
+@media (max-width: 768px) {
+  .search-box {
+    width: 95%; // Adjust the width for tablets and small screens
+    max-width: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    width: 100%; // Full width on very small screens like mobiles
+  }
+}
