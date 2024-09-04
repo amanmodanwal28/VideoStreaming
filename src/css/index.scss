@@ -22,6 +22,7 @@ body, html, #root {
   height: 100%;
   background-color: $main-bg-color; // Ensure background color for body matches root if needed
 }
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -29,21 +30,24 @@ body, html, #root {
   box-sizing: border-box;
 }
 
-.main-content {
-  flex-grow: 1; /* This allows the main content to take up the remaining space */
-  padding: 10px;
-}
-
 .header {
   display: flex;
   justify-content: space-between; /* Space out the header elements */
   align-items: center; /* Vertically align items */
-  padding: 10px 10px;
-  background-color:#E6E6FA;
+  padding: 10px;
+  background-color: #E6E6FA;
   color: #fff;
-  width: auto;
+  width: 100%; /* Ensure the header takes full width */
   box-sizing: border-box;
 }
+
+.main-content {
+  flex-grow: 1; /* This allows the main content to take up the remaining space */
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
 footer {
   background-color: #d76df7;
   color: #fff;
@@ -62,7 +66,31 @@ footer p {
   margin: 4px 0;
 }
 
+.sidebar-container {
+  width: 200px; /* Adjust the width of the sidebar */
+  background-color: #343a40; /* Optional: Background color for the sidebar */
+  color: #fff; /* Optional: Text color for the sidebar */
+  height: 100%;
+  position: fixed; /* Fix the sidebar to the left */
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
+.content-container {
+  margin-left: 220px; /* Add margin to compensate for the sidebar width */
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.search-login-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #E6E6FA;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -86,6 +114,20 @@ footer p {
 
   .header {
     flex-direction: column; /* Stack header elements vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  .sidebar-container {
+    position: static; /* Make sidebar flow with content on small screens */
+    width: 100%; /* Full width on small screens */
+  }
+
+  .content-container {
+    margin-left: 0; /* Remove left margin on small screens */
+  }
+
+  .search-login-container {
+    flex-direction: column;
     align-items: flex-start;
   }
 }
