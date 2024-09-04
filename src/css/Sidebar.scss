@@ -7,25 +7,26 @@
     transition: width 0.3s;
     padding: 10px;
     display: flex;
+    z-index: 2000;
     flex-direction: column;
-  
+
     &.open {
       width: 200px; // Width when expanded
     }
-  
+
     .hamburger {
       font-size: 16px;
       text-align: center;
       margin-bottom: 10px;
       cursor: pointer;
     }
-  
+
     .menu {
       list-style-type: none;
       padding: 0;
       margin: 0;
       flex-grow: 1;
-  
+
       .list-group-item {
         background: none;
         border: none;
@@ -33,32 +34,53 @@
         display: flex;
         flex-direction: column; // Icons and text below each other
         align-items: center;
-  
+
         span.icon {
           font-size: 24px; // Icon size
           margin-bottom: 4px;
         }
-  
+
         .menu-text {
           display: none; // Hidden by default when collapsed
           font-size: 14px;
         }
       }
     }
-  
+
     // When sidebar is open, show the text beside the icon
     &.open .list-group-item {
       flex-direction: row; // Icons and text beside each other
       justify-content: flex-start;
-  
+
       .icon {
         margin-right: 10px; // Space between icon and text
         margin-bottom: 0;
       }
-  
+
       .menu-text {
         display: inline-block; // Show text when sidebar is open
       }
     }
+    &.open .hamburger {
+    width: 50px; /* Set hamburger width to 50px when sidebar is open */
+          font-size: 16px;
+      text-align: center;
+      margin-bottom: 10px;
+      cursor: pointer;
   }
-  
+   &.open .sidebar-image {
+    display: block;
+    margin: 10px auto; /* Center the image */
+    width: 80%; /* Adjust as needed */
+    transition: opacity 0.3s;
+    opacity: 1; /* Fully visible */
+  }
+
+  .sidebar-image {
+    display: none; /* Hidden by default when sidebar is collapsed */
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s;
+      width: 150px; // Adjust size as needed
+  height: 85px;
+  }
+  }
