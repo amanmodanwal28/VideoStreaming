@@ -1,0 +1,17 @@
+/* Footer.css */
+
+/* Ensure the footer sticks to the bottom of the page */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#E6E6FA; /* Dark background for the footer */
+    color: black; /* White text color */
+    text-align: center;
+    padding: 10px 0; /* Padding for better spacing */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+    font-size: 14px; /* Adjust font size */
+    z-index: 1000; /* Ensure the footer is on top of other content */
+  }
+  
