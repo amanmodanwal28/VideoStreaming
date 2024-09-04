@@ -1,14 +1,21 @@
-// import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
-import Search from './Search'
-import LoginIdBar from './Login'
-import '../css/index.scss'
-
+import Search from './Search';
+import LoginIdBar from './Login';
+import '../css/index.scss';
+import MainContent from './MainContent';
+import Footer from './Footer';
 
 createRoot(document.getElementById('root')).render(
   <div className="app-container">
-    <Search />
-    <LoginIdBar />
+    <header className="header">
+      <Search />
+      <LoginIdBar />
+    </header>
+    <main>
+      <MainContent />
+    </main>
+    <Footer />
   </div>
-)
+);
