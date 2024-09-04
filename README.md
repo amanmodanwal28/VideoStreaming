@@ -1,6 +1,6 @@
 ## GoPlayer
 
-![GoPlayer Logo]-(https://github.com/amanmodanwal28/Git_Data/blob/ankita/GO__1_-removebg-preview.png)
+![GoPlayer Logo]-(https://github.com/amanmodanwal28/VideoStreaming/blob/main/src/assets/GP-Logo.png)
 
 ## Overview
 
