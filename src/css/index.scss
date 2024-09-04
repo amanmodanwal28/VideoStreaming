@@ -1,7 +1,7 @@
 // Import Bootstrap SCSS
 @import 'bootstrap/scss/bootstrap';
 
-$main-bg-color :  #7bc1d4;
+$main-bg-color :  #577dc4;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,19 +16,52 @@ $main-bg-color :  #7bc1d4;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $main-bg-color; // Ensure background color for body matches root if needed
+}
 .app-container {
-  display: flex;          /* Use Flexbox for layout */
-  justify-content:baseline; /* Align items to the right */
-  align-items: flex-start; /* Align items to the top */
-  height: 60px;          /* Adjust height as needed for a header */
-  width: 100vw;          /* Full viewport width */
-  box-sizing: border-box; /* Includes padding and border in the element's width and height */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app container takes up full viewport height */
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background-color:$main-bg-color; // Ensure background color for body matches root if needed
+.main-content {
+  flex-grow: 1; /* This allows the main content to take up the remaining space */
+  padding: 10px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Space out the header elements */
+  align-items: center; /* Vertically align items */
+  padding: 10px 10px;
+  background-color:#E6E6FA;
+  color: #fff;
+  width: auto;
+  box-sizing: border-box;
+}
+footer {
+  background-color: #d76df7;
+  color: #fff;
+  text-align: center;
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%;
+  display: none; /* Initially hide the footer */
+  margin-top: 20px; /* Add margin-top for spacing before the footer */
+}
+
+footer.visible {
+  display: block; /* Show footer when it reaches the bottom of the page */
+}
+
+footer p {
+  margin: 4px 0;
+}
+
 
 
 @media (prefers-color-scheme: light) {
@@ -48,7 +81,11 @@ body {
 
 @media (max-width: 768px) {
   .app-container {
-    flex-direction: row; /* Stack items vertically on smaller screens */
-    justify-content: center; /* Center items vertically */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .header {
+    flex-direction: column; /* Stack header elements vertically on smaller screens */
+    align-items: flex-start;
   }
 }

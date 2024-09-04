@@ -8,22 +8,15 @@
   align-items: center; // Center items horizontally
   justify-content: center; // Center items vertically if needed
   height: 100%; // Adjust as needed
-  padding: 1rem; // Adjust as needed
+
+  button{
+ @include button-styles;
+}
 }
 
-.svg-container {
-  display: flex;
-  flex-direction: column; // Stack SVGs in a column
-  align-items: center; // Center SVGs horizontally
-  gap: 1rem; // Space between SVGs
-}
 
-.svg-icon {
-  width: 2rem; // Set size of SVG icons
-  height: 2rem;
-}
 
 .logo {
-  margin-top: 1rem; // Space between SVGs and logo
   width: 150px; // Adjust size as needed
+  height: 85px; // Set your desired height
 }
