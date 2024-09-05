@@ -1,131 +1,143 @@
 // Import Bootstrap SCSS
 @import 'bootstrap/scss/bootstrap';
-
-$main-bg-color :  #577dc4;
-
+$main-bg-color: #577dc4;
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: $main-bg-color;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: $main-bg-color;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-body, html, #root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: $main-bg-color; // Ensure background color for body matches root if needed
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: $main-bg-color; // Ensure background color for body matches root if needed
 }
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the app container takes up full viewport height */
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures the app container takes up full viewport height */
+    box-sizing: border-box;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between; /* Space out the header elements */
-  align-items: center; /* Vertically align items */
-  padding: 10px;
-  background-color: #E6E6FA;
-  color: #fff;
-  width: 100%; /* Ensure the header takes full width */
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    /* Space out the header elements */
+    align-items: center;
+    /* Vertically align items */
+    padding: 5px;
+    background-color: #E6E6FA;
+    color: #fff;
+    width: 100%;
+    /* Ensure the header takes full width */
+    box-sizing: border-box;
 }
 
 .main-content {
-  flex-grow: 1; /* This allows the main content to take up the remaining space */
-  padding: 10px;
-  background-color: #ffffff;
-  color: #000000;
+    flex-grow: 1;
+    /* This allows the main content to take up the remaining space */
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 footer {
-  background-color: #d76df7;
-  color: #fff;
-  text-align: center;
-  padding: 10px; /* Adjust padding as needed */
-  width: 100%;
-  display: none; /* Initially hide the footer */
-  margin-top: 20px; /* Add margin-top for spacing before the footer */
+    background-color: #d76df7;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    /* Adjust padding as needed */
+    width: 100%;
+    display: none;
+    /* Initially hide the footer */
+    margin-top: 20px;
+    /* Add margin-top for spacing before the footer */
 }
 
 footer.visible {
-  display: block; /* Show footer when it reaches the bottom of the page */
+    display: block;
+    /* Show footer when it reaches the bottom of the page */
 }
 
 footer p {
-  margin: 4px 0;
+    margin: 4px 0;
 }
 
 .sidebar-container {
-  width: 200px; /* Adjust the width of the sidebar */
-  color: #fff; /* Optional: Text color for the sidebar */
-  height: 100%;
-  position: fixed; /* Fix the sidebar to the left */
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
+    width: 200px;
+    /* Adjust the width of the sidebar */
+    color: #fff;
+    /* Optional: Text color for the sidebar */
+    height: 100%;
+    position: fixed;
+    /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
 .content-container {
-  margin-left: 220px; /* Add margin to compensate for the sidebar width */
-  padding: 10px;
-  flex-grow: 1;
+    margin-left: 220px;
+    /* Add margin to compensate for the sidebar width */
+    padding: 10px;
+    flex-grow: 1;
 }
 
 .search-login-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px 20px;
-  background-color: #E6E6FA;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 5px 20px;
+    background-color: #E6E6FA;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+     :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
 }
 
 @media (max-width: 768px) {
-  .app-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-  }
-
-  .header {
-    flex-direction: column; /* Stack header elements vertically on smaller screens */
-    align-items: flex-start;
-  }
-
-  .sidebar-container {
-    position: static; /* Make sidebar flow with content on small screens */
-    width: 100%; /* Full width on small screens */
-  }
-
-  .content-container {
-    margin-left: 0; /* Remove left margin on small screens */
-  }
-
-  .search-login-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .app-container {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+    .header {
+        flex-direction: column;
+        /* Stack header elements vertically on smaller screens */
+        align-items: flex-start;
+    }
+    .sidebar-container {
+        /* Make sidebar flow with content on small screens */
+        width: 100%;
+        /* Full width on small screens */
+    }
+    .content-container {
+        margin-left: 0;
+        /* Remove left margin on small screens */
+    }
+    .search-login-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
