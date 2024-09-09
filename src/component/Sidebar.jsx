@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { ListGroup, Button } from "react-bootstrap";
+import HomeIcon from "@mui/icons-material/Home";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary"; // Similar to "Shorts"
+import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import PersonIcon from "@mui/icons-material/Person";
 import "../css/Sidebar.scss";
 
 const Sidebar = () => {
@@ -16,23 +20,20 @@ const Sidebar = () => {
       </Button>
       <ListGroup className="menu">
         <ListGroup.Item>
-          <span className="icon">🏠</span>
-          <span className="menu-text">Home</span>
+          <HomeIcon className="icon" />
+          <span className="menu-text"><b>Home</b></span>
         </ListGroup.Item>
         <ListGroup.Item>
-          <span className="icon">🎬</span>
-          <span className="menu-text">Shorts</span>
+          <VideoLibraryIcon className="icon" />
+          <span className="menu-text"><b>Shorts</b></span>
         </ListGroup.Item>
         <ListGroup.Item>
-          <span className="icon">📦</span>
-          <span className="menu-text">Subscriptions</span>
+          <SubscriptionsIcon className="icon" />
+          <span className="menu-text"><b>Subscriptions</b></span>
         </ListGroup.Item>
         <ListGroup.Item>
-          <span className="icon">📁</span>
-          <span className="menu-text">You</span>
-          <ListGroup className="submenu">
-            {/* Submenu items can go here */}
-          </ListGroup>
+          <PersonIcon className="icon" />
+          <span className="menu-text"><b>You</b></span>
         </ListGroup.Item>
       </ListGroup>
     </div>
