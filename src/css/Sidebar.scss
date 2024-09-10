@@ -7,7 +7,6 @@
     transition: width 0.3s;
     padding: 10px;
     display: flex;
-    z-index: 2000;
     flex-direction: column;
 
     &.open {
@@ -61,26 +60,5 @@
         display: inline-block; // Show text when sidebar is open
       }
     }
-    &.open .hamburger {
-    width: 50px; /* Set hamburger width to 50px when sidebar is open */
-          font-size: 16px;
-      text-align: center;
-      margin-bottom: 10px;
-      cursor: pointer;
   }
-   &.open .sidebar-image {
-    display: block;
-    margin: 10px auto; /* Center the image */
-    width: 80%; /* Adjust as needed */
-    transition: opacity 0.3s;
-    opacity: 1; /* Fully visible */
-  }
-
-  .sidebar-image {
-    display: none; /* Hidden by default when sidebar is collapsed */
-    opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.3s;
-      width: 150px; // Adjust size as needed
-  height: 85px;
-  }
-  }
+  

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Tabs from './Tabs';
 import VideoCard from './VideoCard';
 import '../css/MainContent.css';
@@ -211,16 +211,17 @@ const MainContent = () => {
         thumbnail: "https://img.youtube.com/vi/YCIJDA-BeYc/hqdefault.jpg",
         duration: "4:35",
         category: "Music",
-      }, 
-    
+      },
+
   ];
 
   const filteredVideos = selectedCategory === 'All' ? videos : videos.filter(video => video.category === selectedCategory);
 
   return (
-    <div className="main-content">
-      <Tabs categories={categories} onSelect={setSelectedCategory} />
-      <div className="video-grid">
+    <>
+      <div className="main-content">
+        <Tabs categories={categories} onSelect={setSelectedCategory} />
+        <div className="video-grid">
         {filteredVideos.map((video, index) => (
           <VideoCard
             key={index}
@@ -232,9 +233,10 @@ const MainContent = () => {
             videoUrl={video.videoUrl}
           />
         ))}
+        </div>
       </div>
-    </div>
-  );
+    </>
+  )
 };
 
 export default MainContent;

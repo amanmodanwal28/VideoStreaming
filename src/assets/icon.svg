@@ -1,0 +1,22 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle with gradient -->
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:rgb(0,0,255);stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="url(#grad1)" stroke="black" stroke-width="2" />
+
+  <!-- Play button -->
+  <polygon points="85,70 85,130 140,100" fill="black" />
+
+  <!-- "GO" text -->
+  <text x="90" y="105" font-family="Arial" font-size="20" fill="white" text-anchor="middle">GO</text>
+
+  <!-- "PLAYER" curved text -->
+  <path id="curve" d="M 50,160 A 70,70 0 0,1 150,160" fill="transparent" />
+  <text font-family="Arial" font-size="16" fill="blue">
+    <textPath href="#curve" startOffset="50%" text-anchor="middle">PLAYER</textPath>
+  </text>
+</svg>

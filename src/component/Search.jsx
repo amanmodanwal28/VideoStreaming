@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import '../css/Search.scss' // Adjust the path if needed
 import mic from '../assets/mic.png'
-import Hamburger from './Hamburger'
+// import Hamburger from './Hamburger'
+import logo from '../assets/GP-Logo.png'
 const SearchBar = () => {
   const [query, setQuery] = useState('')
 
@@ -12,8 +13,8 @@ const SearchBar = () => {
 
   return (
     <>
-      <Hamburger />
       <div className="container">
+        <img src={logo} alt="Logo" className="logo" />
         <div className="search-box">
           <input
             type="text"

@@ -2,15 +2,21 @@
 @import 'mixins'; // Import the mixins file
 
 
-// .logo {
-//   width: 200px; // Increase the width as needed
-//   height: 85px; // Keep the height fixed
-//   object-fit: contain; /* Maintains aspect ratio and fits the content within the defined width and height */
-//   display: block; /* Removes any extra spacing at the bottom */
-// }
+.HamburgerContainer {
+  display: flex;
+  flex-direction: column; // Stack children in a column
+  align-items: center; // Center items horizontally
+  justify-content: center; // Center items vertically if needed
+  height: 100%; // Adjust as needed
+
+  button{
+ @include button-styles;
+}
+}
+
+
 
 .logo {
-  transform: scale(2);
-object-fit: contain;
-display: block;
+  width: 150px; // Adjust size as needed
+  height: 85px; // Set your desired height
 }

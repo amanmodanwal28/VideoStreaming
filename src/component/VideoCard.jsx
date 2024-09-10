@@ -8,7 +8,7 @@ const VideoCard = ({ title, channel, views, timestamp, thumbnail, videoUrl }) =>
     setIsVideoPlaying(true);
   };
 
-  return (
+  return (<>
     <div className="video-card">
       {!isVideoPlaying ? (
         <img
@@ -34,7 +34,7 @@ const VideoCard = ({ title, channel, views, timestamp, thumbnail, videoUrl }) =>
         <p>{channel}</p>
         <p>{views} • {timestamp}</p>
       </div>
-    </div>
+    </div></>
   );
 };
 

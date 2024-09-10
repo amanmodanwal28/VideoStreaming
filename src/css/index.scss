@@ -1,13 +1,13 @@
 // Import Bootstrap SCSS
-@import 'bootstrap/scss/bootstrap';
-$main-bg-color: #577dc4;
+// @import 'bootstrap/scss/bootstrap';
+$main-bg-color: #b2bbcb;
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: $main-bg-color;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -20,7 +20,7 @@ html,
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: $main-bg-color; // Ensure background color for body matches root if needed
+
 }
 
 .app-container {
@@ -89,10 +89,10 @@ footer p {
 }
 
 .content-container {
-    margin-left: 220px;
+    // margin-left: 220px;
     /* Add margin to compensate for the sidebar width */
     padding: 10px;
-    flex-grow: 1;
+    // flex-grow: 1;
 }
 
 .search-login-container {

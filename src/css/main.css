@@ -4,20 +4,20 @@
     overflow: hidden;
     cursor: pointer;
   }
-  
+
   .thumbnail {
     width: 100%;
     height: auto;
     display: block;
   }
-  
+
   .video-info {
     padding: 10px;
     background-color: #000; /* Adjust as needed */
     color: #fff;
     position: relative;
   }
-  
+
   .duration {
     position: absolute;
     bottom: 10px;
@@ -27,25 +27,24 @@
     padding: 2px 5px;
     border-radius: 3px;
   }
-  
+
   .video-card video {
     width: 100%;
     height: auto;
     display: none; /* Hide initially */
   }
-  
+
   .video-card:hover .thumbnail {
     opacity: 0.5; /* Slight fade effect on hover */
   }
-  
+
   .video-card:hover .video {
     display: block; /* Show video when hovering */
   }
-  
+
   video:fullscreen {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: 9999; /* Ensure video is above other elements */
+    /* z-index: 9999; Ensure video is above other elements */
   }
-  
